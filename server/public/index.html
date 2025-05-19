@@ -1,0 +1,57 @@
+<html>
+<head>
+  <title>NBA Talent Comparison</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="help.html">Help</a>
+  </nav>
+
+  <h1>NBA Talent Comparison</h1>
+  <p>This table displays the top 5 NBA players from the USA and the top 5 from international backgrounds.</p>
+
+  <table id="stats-table">
+    <thead>
+      <tr>
+        <th>Player ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Nationality</th>
+        <th>Season</th>
+        <th>PPG</th>
+        <th>APG</th>
+        <th>RPG</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <h2>Player Stats Comparison</h2>
+  <div>
+    <button class="toggle-btn" data-target="ppgChartContainer">PPG</button>
+    <button class="toggle-btn" data-target="apgChartContainer">APG</button>
+    <button class="toggle-btn" data-target="rpgChartContainer">RPG</button>
+  </div>
+
+  <div id="ppgChartContainer" class="chart-container">
+    <canvas id="ppgChart"></canvas>
+  </div>
+  <div id="apgChartContainer" class="chart-container" style="display:none;">
+    <canvas id="apgChart"></canvas>
+  </div>
+  <div id="rpgChartContainer" class="chart-container" style="display:none;">
+    <canvas id="rpgChart"></canvas>
+  </div>
+
+  <h2>Nationality Distribution</h2>
+  <div class="pieChartContainer">
+    <canvas id="countChart"></canvas>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
